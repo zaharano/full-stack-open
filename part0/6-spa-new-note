@@ -1,0 +1,15 @@
+note over browser:
+form event handler from spa.js
+interrupts default
+new note is created using form entry and timestamp
+this note is added to local note data array
+the form field is cleared
+note display DOM nodes redrawn (using local data array 
+which includes the new note)
+single new note packaged as json in a POST req
+end note
+browser->server: HTTP POST /new_note_spa with json header and payload
+note over server:
+ arraynote is unpackaged and added to server note data
+end note
+server-->browser: 201 created

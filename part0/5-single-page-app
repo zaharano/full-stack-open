@@ -1,0 +1,19 @@
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->browser: HTML
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->browser: spa.js
+note over browser:
+executes spa.js
+which includes request for data
+end note
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.jsonserver-->browser: HTML
+server-->browser: data.json
+note over browser:
+executes callback in spa.js
+builds DOM nodes:
+A ul node and a li node for each entry 
+in data.json,
+then attaches the ul to the document
+end note

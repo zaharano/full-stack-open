@@ -1,0 +1,20 @@
+browser->server: HTTP POST: form data
+note over server: 
+form data is interpreted
+and new note+timestamp added to note data
+end note
+server-->browser: HTTP 302 redirect: /notes
+browser->server: HTTP GET: /notes
+server-->browser: HTML
+browser->server: HTTP GET: main.css
+server-->browser: main.css
+browser->server: HTTP GET: main.js
+server-->browser: main.js
+note over browser: executes js requesting JSON
+browser->server: HTTP GET: data.json
+note over server:
+note data (incl new note!) 
+packaged as JSON
+end note
+server-->browser: data.json
+note over browser: executes event handler render notes data
