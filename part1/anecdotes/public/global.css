@@ -9,8 +9,8 @@ html {
 }
 
 .container {
-  width: 400px;
-  height: 10em;
+  width: 500px;
+  min-height: 10em;
   border: 1px solid white;
   border-radius: 5px;
   padding: 5px 30px;
